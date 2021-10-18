@@ -152,13 +152,17 @@ function generateIntern () {
 
 function writeToFile(teamArray) {
   let htmlPath = path.join(__dirname, '/dist', 'index.html')
-  return fs.writeFile(htmlPath, generateHTML(teamArray))
+  return fs.writeFile(htmlPath, generateHTML(teamArray), (err) => { 
+    if (err) { 
+      console.log(err); 
+    } 
+  });
 }
   
 
-function generateTeam(){
-
-writeToFile();
+function generateTeam(teamArray){
+  
+writeToFile(teamArray);
 }
 
   

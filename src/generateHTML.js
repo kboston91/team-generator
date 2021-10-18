@@ -1,6 +1,8 @@
 const generateHTML = (teamArray) =>{
   return `
-  <div>Does this work?</div>
+  <div>manager card </div>
+  <div>engineer card </div>
+  <div>intern card </div>
   `
 }
 
