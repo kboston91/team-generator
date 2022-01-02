@@ -4,19 +4,19 @@ const generateHTML = (tArray) =>{
 
   console.log(tArray);
   console.log((tArray[0].constructor.name));
-  for(let i=1; i<tArray.length; i++){
+  for(var i = 1; i<tArray.length; i++){
     if(tArray[i].constructor.name == 'Engineer'){
       engineerHtml += `<div class= "card"> ${tArray[i].constructor.name} ${tArray[i].name} ${tArray[i].id} ${tArray[i].email} ${tArray[i].github} </div>`
     } else {
       internHtml += `<div class= "card"> ${tArray[i].constructor.name} ${tArray[i].name} ${tArray[i].id} ${tArray[i].email} ${tArray[i].school} </div>`
     }
-  };
+  }
   return `
-  <div class= "card">${tArray[i].constructor.name} ${tArray[0].name} ${tArray[0].id} ${tArray[0].email} ${tArray[0].office}</div>
+  <div class= "card">${tArray[0].constructor.name} ${tArray[0].name} ${tArray[0].id} ${tArray[0].email} ${tArray[0].office}</div>
   ${engineerHtml}
   ${internHtml}
   `
-}
+};
 
 module.exports = teamArray => {
   return `
